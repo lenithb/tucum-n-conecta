@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// uso de map, key, link.
 function Home() {
   const categories = [
     {
