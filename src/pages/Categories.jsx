@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import contents from "../data/contents";
 
-// por ahora todos los enlaces llevan a /explore.
 function Categories() {
   const categories = [...new Set(contents.map((content) => content.category))];
 

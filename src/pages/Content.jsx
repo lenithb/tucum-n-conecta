@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import contents from "../data/contents";
 
 function Content() {
-  const { id } = useParams(); // uso de useParams
+  const { id } = useParams();
 
   const content = contents.find((item) => item.id === Number(id));
 

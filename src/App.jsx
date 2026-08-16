@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
@@ -10,19 +12,29 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
+  const [darkMode, setDarkMode] = useState(false);
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<Explore />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/content/:id" element={<Content />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+  const toggleDarkMode = () => {
+    setDarkMode((currentMode) => !currentMode);
+  };
+
+  return (
+    <div className={darkMode ? "app dark" : "app"}>
+      <BrowserRouter>
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/content/:id" element={<Content />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

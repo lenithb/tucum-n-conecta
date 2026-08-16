@@ -1,45 +1,59 @@
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ darkMode, toggleDarkMode }) {
   return (
     <header className="navbar">
-      <nav>
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-        >
-          Inicio
+      <div className="navbar-content">
+        <NavLink to="/" className="navbar-logo">
+          Cultura Conectada
         </NavLink>
 
-        <NavLink
-          to="/explore"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-        >
-          Explorar
-        </NavLink>
+        <nav className="navbar-links">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Inicio
+          </NavLink>
 
-        <NavLink
-          to="/categories"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
-        >
-          Categorías
-        </NavLink>
+          <NavLink
+            to="/explore"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Explorar
+          </NavLink>
 
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? "nav-link active" : "nav-link"
-          }
+          <NavLink
+            to="/categories"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Categorías
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Sobre
+          </NavLink>
+        </nav>
+
+        <button
+          className="theme-toggle"
+          onClick={toggleDarkMode}
+          aria-label="Cambiar tema"
         >
-          Sobre el proyecto
-        </NavLink>
-      </nav>
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+      </div>
     </header>
   );
 }
