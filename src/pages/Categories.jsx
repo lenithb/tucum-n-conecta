@@ -34,7 +34,9 @@ function Categories() {
                   : "contenidos disponibles"}
               </p>
 
-              <Link to="/explore">Explorar contenidos →</Link>
+              <Link to={`/explore?category=${encodeURIComponent(category)}`}>
+                Explorar {category} →
+              </Link>
             </article>
           );
         })}

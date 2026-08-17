@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
+
 import contents from "../data/contents";
 import Card from "../components/Card";
 
 function Explore() {
-  const [selectedCategory, setSelectedCategory] = useState("Todas");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const categoryFromUrl = searchParams.get("category");
+
+  const [selectedCategory, setSelectedCategory] = useState(
+    categoryFromUrl || "Todas",
+  );
 
   const categories = [
     "Todas",
@@ -15,6 +23,16 @@ function Explore() {
       ? contents
       : contents.filter((content) => content.category === selectedCategory); // filtrado de categorías
 
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+
+    if (category === "Todas") {
+      setSearchParams({});
+    } else {
+      setSearchParams({ category });
+    }
+  };
+  // nada de data apis, loaders ni actions :D
   return (
     <main className="explore">
       <section className="explore-header">
@@ -44,7 +62,7 @@ function Explore() {
                   ? "filter-button active"
                   : "filter-button"
               }
-              onClick={() => setSelectedCategory(category)} // renderiza el componente cuando el user pulsa.
+              onClick={() => handleCategoryChange(category)}
             >
               {category}
             </button>
