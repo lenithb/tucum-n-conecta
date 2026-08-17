@@ -1,7 +1,3 @@
-/* ================================
-   RESET
-================================ */
-
 * {
   margin: 0;
   padding: 0;
@@ -54,9 +50,7 @@ img {
     color 0.3s ease;
 }
 
-/* ================================
-   NAVBAR
-================================ */
+/* Navbar */
 
 .navbar {
   position: sticky;
@@ -136,9 +130,7 @@ img {
   transform: scale(1.05);
 }
 
-/* ================================
-   GENERAL
-================================ */
+/* Layout general */
 
 main {
   max-width: 1200px;
@@ -150,9 +142,7 @@ section {
   margin-bottom: 80px;
 }
 
-/* ================================
-   HOME
-================================ */
+/* Home */
 
 .hero {
   min-height: 550px;
@@ -215,9 +205,7 @@ section {
   opacity: 0.9;
 }
 
-/* ================================
-   SECTION HEADER
-================================ */
+/* Encabezados */
 
 .section-header {
   margin-bottom: 40px;
@@ -252,16 +240,12 @@ section {
   color: #666;
 }
 
-/* ================================
-   CARDS
-================================ */
+/* Cards */
 
 .content-grid,
 .category-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 24px;
 }
 
@@ -285,10 +269,6 @@ section {
 
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
-
-/* ================================
-   CONTENT CARD
-================================ */
 
 .card-image {
   aspect-ratio: 16 / 10;
@@ -340,9 +320,7 @@ section {
   text-decoration: underline;
 }
 
-/* ================================
-   CATEGORY CARDS
-================================ */
+/* Categorías */
 
 .category-card {
   padding: 28px;
@@ -361,9 +339,7 @@ section {
   font-weight: 700;
 }
 
-/* ================================
-   EXPLORE
-================================ */
+/* Explorar */
 
 .explore-header {
   margin-bottom: 50px;
@@ -383,9 +359,81 @@ section {
   color: #666;
 }
 
-/* ================================
-   CONTENT DETAIL
-================================ */
+/* Filtro de categorías */
+
+.category-filter {
+  margin-bottom: 50px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.filter-header h2 {
+  font-size: 1.2rem;
+}
+
+.filter-header span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 9px 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 999px;
+
+  background: transparent;
+  color: #666;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.filter-button:hover {
+  border-color: #aaa;
+  color: #1c1c1c;
+}
+
+.filter-button.active {
+  border-color: #1c1c1c;
+  background: #1c1c1c;
+  color: white;
+}
+
+.empty-results {
+  padding: 80px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #ddd;
+  border-radius: 16px;
+}
+
+.empty-results h2 {
+  margin-bottom: 8px;
+}
+
+.empty-results p {
+  color: #777;
+}
+
+/* Detalle del contenido */
 
 .content-detail {
   max-width: 1100px;
@@ -411,6 +459,7 @@ section {
 }
 
 .content-detail-image {
+  width: 100%;
   height: 100%;
   min-height: 500px;
   object-fit: cover;
@@ -418,6 +467,7 @@ section {
 
 .content-detail-info {
   padding: 50px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -429,6 +479,7 @@ section {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
+
   color: #777;
 }
 
@@ -464,9 +515,7 @@ section {
   margin-top: 4px;
 }
 
-/* ================================
-   ABOUT
-================================ */
+/* About */
 
 .about-header {
   margin-bottom: 60px;
@@ -495,9 +544,7 @@ section {
   color: #666;
 }
 
-/* ================================
-   NOT FOUND
-================================ */
+/* 404 */
 
 .not-found,
 .content-not-found {
@@ -530,9 +577,7 @@ section {
   font-weight: 700;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* Footer */
 
 .footer {
   margin-top: 80px;
@@ -599,9 +644,7 @@ section {
   color: #777;
 }
 
-/* ================================
-   DARK MODE
-================================ */
+/* Modo oscuro */
 
 .app.dark {
   background: #111;
@@ -613,8 +656,7 @@ section {
   border-color: #292929;
 }
 
-.app.dark .navbar-logo,
-.app.dark .nav-link.active {
+.app.dark .navbar-logo {
   color: white;
 }
 
@@ -657,6 +699,26 @@ section {
   color: #aaa;
 }
 
+.app.dark .filter-button {
+  border-color: #333;
+  color: #aaa;
+}
+
+.app.dark .filter-button:hover {
+  border-color: #666;
+  color: white;
+}
+
+.app.dark .filter-button.active {
+  border-color: #f2f2f2;
+  background: #f2f2f2;
+  color: #111;
+}
+
+.app.dark .empty-results {
+  border-color: #333;
+}
+
 .app.dark .footer {
   border-color: #292929;
   background: #181818;
@@ -675,9 +737,7 @@ section {
   color: white;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
+/* Responsive */
 
 @media (max-width: 900px) {
   .content-grid,
@@ -746,6 +806,21 @@ section {
 
   .content-meta {
     gap: 30px;
+  }
+
+  .filter-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .filter-buttons {
+    gap: 8px;
+  }
+
+  .filter-button {
+    padding: 8px 13px;
+    font-size: 0.85rem;
   }
 
   .footer-content {
