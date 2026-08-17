@@ -116,8 +116,8 @@ function Explore() {
             <h2>¿No sabés qué descubrir?</h2>
 
             <p>
-              Dejá que Cultura Conectada elija un contenido tucumano al azar
-              para vos.
+              Dejá que Tucumán Conecta elija un contenido tucumano al azar para
+              vos.
             </p>
           </div>
 

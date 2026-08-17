@@ -1,87 +1,82 @@
 import { Link } from "react-router-dom";
 
-// uso de map, key, link.
+import HeroSlider from "../components/HeroSlider";
+import contents from "../data/contents";
+import Card from "../components/Card";
+
 function Home() {
-  const categories = [
-    {
-      name: "Música",
-      description: "Descubrí artistas y sonidos nacidos en Tucumán.",
-    },
-    {
-      name: "Cine y series",
-      description: "Conocé producciones audiovisuales tucumanas.",
-    },
-    {
-      name: "Arte digital",
-      description: "Explorá artistas y expresiones visuales.",
-    },
-    {
-      name: "Videojuegos",
-      description: "Descubrí proyectos y desarrolladores de Tucumán.",
-    },
-    {
-      name: "Literatura",
-      description: "Conocé escritores y obras vinculadas a la provincia.",
-    },
-    {
-      name: "Cultura local",
-      description: "Explorá lugares, tradiciones y patrimonio tucumano.",
-    },
-  ];
+  const featuredContents = contents.slice(0, 3);
 
   return (
     <main className="home">
-      <section className="hero">
-        <span className="hero-label">Cultura de Tucumán</span>
+      <HeroSlider />
 
-        <h1>Cultura Conectada</h1>
-
-        <p>
-          Un espacio para descubrir las expresiones culturales, artistas, obras,
-          lugares y proyectos que forman parte de la identidad tucumana.
-        </p>
-
-        <Link to="/explore" className="hero-button">
-          Comenzar a explorar
-        </Link>
-      </section>
-
-      <section className="featured-categories">
+      <section className="home-intro">
         <div className="section-header">
-          <span>Categorías</span>
+          <span>Identidad tucumana</span>
 
-          <h2>Descubrí la cultura tucumana</h2>
+          <h2>
+            Cultura que vive,
+            <br />
+            cultura que conecta.
+          </h2>
 
           <p>
-            Explorá diferentes formas de expresión cultural presentes en nuestra
-            provincia.
+            Tucumán Conecta es un espacio para descubrir y compartir un poquito
+            de Tucumán.
           </p>
         </div>
 
-        <div className="category-grid">
-          {categories.map((category) => (
-            <article className="category-card" key={category.name}>
-              <h3>{category.name}</h3>
+        <Link to="/explore" className="hero-button">
+          Explorar contenidos
+        </Link>
+      </section>
 
-              <p>{category.description}</p>
+      <section className="home-featured">
+        <div className="section-header">
+          <span>Para empezar</span>
 
-              <Link to="/categories">Ver categoría →</Link>
-            </article>
+          <h2>Descubrí Tucumán</h2>
+
+          <p>
+            Conocé algunas de las historias, obras y expresiones culturales que
+            forman parte de nuestra provincia.
+          </p>
+        </div>
+
+        <div className="content-grid">
+          {featuredContents.map((content) => (
+            <Card key={content.id} content={content} />
           ))}
+        </div>
+
+        <div className="section-action">
+          <Link to="/explore" className="explore-button">
+            Ver todo el contenido
+          </Link>
         </div>
       </section>
 
-      <section className="home-explore">
-        <h2>¿Querés descubrir algo nuevo?</h2>
+      <section className="home-categories">
+        <div className="section-header">
+          <span>Explorá por temática</span>
 
-        <p>
-          Explorá nuestra colección de contenidos culturales relacionados con
-          Tucumán.
-        </p>
+          <h2>Hay mucho por descubrir</h2>
+        </div>
 
-        <Link to="/explore" className="explore-button">
-          Explorar contenidos
-        </Link>
+        <div className="home-category-links">
+          <Link to="/explore?category=Música">Música</Link>
+
+          <Link to="/explore?category=Cine">Cine y series</Link>
+
+          <Link to="/explore?category=Arte digital">Arte digital</Link>
+
+          <Link to="/explore?category=Videojuegos">Videojuegos</Link>
+
+          <Link to="/explore?category=Literatura">Literatura</Link>
+
+          <Link to="/explore?category=Cultura local">Cultura local</Link>
+        </div>
       </section>
     </main>
   );

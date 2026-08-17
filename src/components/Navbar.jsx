@@ -12,7 +12,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
     <header className="navbar">
       <div className="navbar-content">
         <NavLink to="/" className="navbar-logo" onClick={closeMenu}>
-          Cultura Conectada
+          Tucumán Conecta
         </NavLink>
 
         <button

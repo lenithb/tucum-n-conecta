@@ -6,7 +6,7 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
-            Cultura Conectada
+            Tucumán Conecta
           </Link>
 
           <p>Un espacio para descubrir y conectar con la cultura tucumana.</p>

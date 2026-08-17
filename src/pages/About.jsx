@@ -4,7 +4,7 @@ function About() {
       <section className="about-header">
         <span>Sobre el proyecto</span>
 
-        <h1>Cultura Conectada</h1>
+        <h1>Tucumán Conecta</h1>
 
         <p>
           Una plataforma dedicada a descubrir y conectar con la cultura
@@ -17,7 +17,7 @@ function About() {
           <h2>¿Cuál es el objetivo?</h2>
 
           <p>
-            Cultura Conectada busca reunir en un solo lugar diferentes
+            Tucumán Conecta busca reunir en un solo lugar diferentes
             manifestaciones culturales de Tucumán, desde la música y el cine
             hasta la literatura, los videojuegos, el arte y el patrimonio local.
           </p>

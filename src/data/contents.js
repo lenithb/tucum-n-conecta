@@ -8,7 +8,7 @@ const contents = [
     description:
       "Miniserie tucumana que cuenta la historia de Ana, una joven que llega a Tafí Viejo y se encuentra con una historia marcada por los vínculos familiares, el paisaje, la citricultura y el pasado ferroviario de la ciudad.",
     author: "Eduardo Pinto",
-    image: "/images/tafi-viejo-verdor-sin-tiempo.jpg",
+    image: "/images/tafiv.png",
     year: 2026,
   },
 
@@ -19,7 +19,7 @@ const contents = [
     description:
       "Documental dedicado a recuperar la memoria y la importancia del ferrocarril en Tafí Viejo, una actividad que tuvo un papel fundamental en el desarrollo de la ciudad.",
     author: "Producción audiovisual tucumana",
-    image: "/images/sobre-los-rieles-de-la-historia.jpg",
+    image: "/images/rieles.jpeg",
     year: 2020,
   },
 
@@ -30,7 +30,7 @@ const contents = [
     description:
       "Película dirigida por Gerardo Vallejo, una obra fundamental del cine social argentino y una de las producciones más representativas del cine tucumano.",
     author: "Gerardo Vallejo",
-    image: "/images/camino-hacia-la-muerte-del-viejo-reales.jpg",
+    image: "/images/viejo-reales.jpeg",
     year: 1974,
   },
 
@@ -41,7 +41,7 @@ const contents = [
     description:
       "Uno de los principales espacios audiovisuales de la provincia, con competencias, muestras, producciones del NOA, cortometrajes, talleres y encuentros entre realizadores.",
     author: "Ente Cultural de Tucumán",
-    image: "/images/festival-tucuman-cine.jpg",
+    image: "/images/cine.webp",
     year: 2026,
   },
 
@@ -54,7 +54,7 @@ const contents = [
     description:
       "La cantora tucumana que se convirtió en una de las voces más importantes de la música popular argentina y en una figura fundamental del folklore latinoamericano.",
     author: "Mercedes Sosa",
-    image: "/images/mercedes-sosa.jpg",
+    image: "/images/mercedes.jpeg",
     year: 1935,
   },
 
@@ -65,7 +65,7 @@ const contents = [
     description:
       "Guitarrista y compositor nacido en Tucumán, reconocido por su aporte a la música popular argentina y especialmente al folklore.",
     author: "Juan Falú",
-    image: "/images/juan-falu.jpg",
+    image: "/images/juan.jpeg",
     year: 1948,
   },
 
@@ -76,7 +76,7 @@ const contents = [
     description:
       "Grupo folklórico tucumano que tuvo una importante trayectoria dentro de la música popular argentina y que forma parte del patrimonio musical de la provincia.",
     author: "Los Tucu Tucu",
-    image: "/images/los-tucu-tucu.jpg",
+    image: "/images/tucu.webp",
     year: 1959,
   },
 
@@ -87,7 +87,7 @@ const contents = [
     description:
       "Banda nacida en Tucumán que combina salsa, música popular y elementos contemporáneos para desarrollar una propuesta musical con identidad propia.",
     author: "Tumbao de Caña",
-    image: "/images/tumbao-de-cana.jpg",
+    image: "/images/tumbao.jpg",
     year: 2010,
   },
 
@@ -100,7 +100,7 @@ const contents = [
     description:
       "Intervención artística multimedia presentada en Tucumán que combina danza contemporánea, recursos audiovisuales y memoria histórica.",
     author: "Producción artística tucumana",
-    image: "/images/cuerpos-floridos.jpg",
+    image: "/images/florido.jpg",
     year: 2026,
   },
 
@@ -111,7 +111,7 @@ const contents = [
     description:
       "Uno de los principales espacios de artes visuales de Tucumán. Su colección reúne pinturas, dibujos, grabados, esculturas, fotografías y otras expresiones artísticas.",
     author: "Museo Timoteo Navarro",
-    image: "/images/museo-timoteo-navarro.jpg",
+    image: "/images/museo.webp",
     year: 2026,
   },
 
@@ -122,7 +122,7 @@ const contents = [
     description:
       "La escultora nacida en Tucumán se convirtió en una de las artistas argentinas más importantes de finales del siglo XIX y principios del XX.",
     author: "Lola Mora",
-    image: "/images/lola-mora.jpg",
+    image: "/images/lola.webp",
     year: 1866,
   },
 
@@ -133,7 +133,7 @@ const contents = [
     description:
       "Espacio dedicado a conservar y difundir la obra del escultor tucumano Juan Carlos Iramain y su aporte a las artes visuales de la provincia.",
     author: "Juan Carlos Iramain",
-    image: "/images/museo-iramain.jpg",
+    image: "/images/iramain.jpeg",
     year: 2026,
   },
 
@@ -146,7 +146,7 @@ const contents = [
     description:
       "Videojuego desarrollado por el tucumano Damián Caro y ganador del concurso EVA Awards 2023 en la categoría Mi Primer Videojuego Profesional.",
     author: "Damián Caro",
-    image: "/images/los-infernales.jpg",
+    image: "/images/infernales.jpg",
     year: 2023,
   },
 
@@ -157,7 +157,7 @@ const contents = [
     description:
       "Estudio tucumano dedicado al desarrollo de videojuegos. Entre sus proyectos aparecen títulos como Lola y Choco, Shikita y Barrial F.C.",
     author: "TVC Games",
-    image: "/images/tvc-games.jpg",
+    image: "/images/tvc.png",
     year: 2026,
   },
 
@@ -168,7 +168,7 @@ const contents = [
     description:
       "Uno de los proyectos desarrollados por integrantes de TVC Games, formando parte de la producción de videojuegos realizada desde Tucumán.",
     author: "TVC Games",
-    image: "/images/lola-y-choco.jpg",
+    image: "/images/lolaychoko.png",
     year: 2026,
   },
 
@@ -179,7 +179,7 @@ const contents = [
     description:
       "Tucumán cuenta con estudios y desarrolladores que participan en eventos nacionales como EVA y trabajan en proyectos propios, educativos y comerciales.",
     author: "Desarrolladores de videojuegos de Tucumán",
-    image: "/images/videojuegos-tucuman.jpg",
+    image: "/images/juegos.jpg",
     year: 2026,
   },
 
@@ -192,7 +192,7 @@ const contents = [
     description:
       "Escritor y periodista nacido en Tucumán, reconocido internacionalmente por sus novelas y por una extensa trayectoria vinculada con el periodismo y la literatura.",
     author: "Tomás Eloy Martínez",
-    image: "/images/tomas-eloy-martinez.jpg",
+    image: "/images/tomas.webp",
     year: 1934,
   },
 
@@ -203,7 +203,7 @@ const contents = [
     description:
       "Festival cultural dedicado a la literatura y las letras que reúne escritores, lectores, talleres, presentaciones de libros y diferentes propuestas culturales en Tucumán.",
     author: "Ente Cultural de Tucumán",
-    image: "/images/mayo-de-las-letras.jpg",
+    image: "/images/mayo.webp",
     year: 2026,
   },
 
@@ -214,7 +214,7 @@ const contents = [
     description:
       "Programa destinado a promover la lectura y la escritura creativa entre estudiantes y comunidades educativas de la provincia.",
     author: "Programa Tucumán Lee",
-    image: "/images/tucuman-lee.jpg",
+    image: "/images/tucumanlee.jpeg",
     year: 2026,
   },
 
@@ -225,7 +225,7 @@ const contents = [
     description:
       "Obra de Roberto Espinosa que reúne información sobre destacadas personalidades de la cultura tucumana, incluyendo figuras como Mercedes Sosa, Atahualpa Yupanqui y Tomás Eloy Martínez.",
     author: "Roberto Espinosa",
-    image: "/images/cultura-tucuman-bicentenario.jpg",
+    image: "/images/cultura.jpeg",
     year: 2016,
   },
 
@@ -238,7 +238,7 @@ const contents = [
     description:
       "Espacio dedicado al folklore y al encuentro cultural, donde la música, la danza y las tradiciones forman parte de la identidad cultural tucumana.",
     author: "Cultura folklórica tucumana",
-    image: "/images/pena-la-escondida.jpg",
+    image: "/images/escondida.jpeg",
     year: 2026,
   },
 
@@ -249,7 +249,7 @@ const contents = [
     description:
       "Uno de los principales símbolos históricos de Tucumán y de Argentina. En este lugar, el 9 de julio de 1816, el Congreso declaró la Independencia.",
     author: "Patrimonio histórico argentino",
-    image: "/images/casa-historica.jpg",
+    image: "/images/casa.webp",
     year: 1816,
   },
 
@@ -260,7 +260,7 @@ const contents = [
     description:
       "Uno de los principales sitios arqueológicos de Tucumán, relacionado con la historia y el patrimonio de los pueblos originarios de los Valles Calchaquíes.",
     author: "Pueblo Quilmes",
-    image: "/images/ciudad-sagrada-quilmes.jpg",
+    image: "/images/quilmes.webp",
     year: 2026,
   },
 
@@ -271,7 +271,7 @@ const contents = [
     description:
       "Espacio arqueológico ubicado en El Mollar, Tafí del Valle, que conserva y exhibe antiguos menhires vinculados con las culturas prehispánicas de los Valles Calchaquíes.",
     author: "Patrimonio arqueológico tucumano",
-    image: "/images/los-menhires.jpg",
+    image: "/images/museo1.webp",
     year: 2026,
   },
 ];
