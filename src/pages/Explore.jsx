@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 
 import contents from "../data/contents";
 import Card from "../components/Card";
 
 function Explore() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   const categoryFromUrl = searchParams.get("category");
 
@@ -43,6 +44,18 @@ function Explore() {
 
     return matchesCategory && matchesSearch;
   });
+
+  const discoverRandomContent = () => {
+    if (filteredContents.length === 0) {
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * filteredContents.length);
+
+    const randomContent = filteredContents[randomIndex];
+
+    navigate(`/content/${randomContent.id}`);
+  };
 
   return (
     <main className="explore">
@@ -92,6 +105,29 @@ function Explore() {
               </button>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="discover-section">
+        <div className="discover-content">
+          <div>
+            <span className="discover-label">Descubrimiento</span>
+
+            <h2>¿No sabés qué descubrir?</h2>
+
+            <p>
+              Dejá que Cultura Conectada elija un contenido tucumano al azar
+              para vos.
+            </p>
+          </div>
+
+          <button
+            className="discover-button"
+            onClick={discoverRandomContent}
+            disabled={filteredContents.length === 0}
+          >
+            Descubrí algo nuevo
+          </button>
         </div>
       </section>
 

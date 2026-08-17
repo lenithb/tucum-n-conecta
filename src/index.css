@@ -897,6 +897,87 @@ section {
   }
 }
 
+/* descubrir */
+.discover-section {
+  margin-bottom: 50px;
+  padding: 30px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+
+  background: white;
+}
+
+.discover-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.discover-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: #777;
+}
+
+.discover-content h2 {
+  margin: 6px 0 8px;
+
+  font-size: 1.6rem;
+}
+
+.discover-content p {
+  color: #666;
+}
+
+.discover-button {
+  flex-shrink: 0;
+
+  padding: 13px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #1c1c1c;
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.discover-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.discover-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.app.dark .discover-section {
+  border-color: #292929;
+  background: #1a1a1a;
+}
+
+.app.dark .discover-content p {
+  color: #aaa;
+}
+
+.app.dark .discover-button {
+  background: #f2f2f2;
+  color: #111;
+}
+
 @media (max-width: 480px) {
   .navbar-content {
     flex-wrap: wrap;

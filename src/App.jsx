@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -11,8 +11,17 @@ import Content from "./pages/Content";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
+// persistencia del darkmode en localstorage
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    return savedTheme === "dark";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
     setDarkMode((currentMode) => !currentMode);
@@ -25,10 +34,15 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/explore" element={<Explore />} />
+
           <Route path="/categories" element={<Categories />} />
+
           <Route path="/content/:id" element={<Content />} />
+
           <Route path="/about" element={<About />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
 
