@@ -23,7 +23,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Cultura Conectada</p>
+        <p>© {new Date().getFullYear()} Tucumán Conecta.</p>
 
         <p>Proyecto educativo desarrollado con React</p>
       </div>
