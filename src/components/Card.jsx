@@ -18,7 +18,7 @@ function Card({ content }) {
         </div>
 
         <Link className="card-link" to={`/content/${content.id}`}>
-          Ver contenido 🡲
+          Ver contenido →
         </Link>
       </div>
     </article>

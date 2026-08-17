@@ -13,15 +13,12 @@ function Explore() {
     categoryFromUrl || "Todas",
   );
 
+  const [searchTerm, setSearchTerm] = useState("");
+
   const categories = [
     "Todas",
     ...new Set(contents.map((content) => content.category)),
   ];
-
-  const filteredContents =
-    selectedCategory === "Todas"
-      ? contents
-      : contents.filter((content) => content.category === selectedCategory); // filtrado de categorías
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -32,7 +29,21 @@ function Explore() {
       setSearchParams({ category });
     }
   };
-  // nada de data apis, loaders ni actions :D
+
+  const filteredContents = contents.filter((content) => {
+    const matchesCategory =
+      selectedCategory === "Todas" || content.category === selectedCategory;
+
+    const search = searchTerm.toLowerCase().trim();
+
+    const matchesSearch =
+      content.title.toLowerCase().includes(search) ||
+      content.description.toLowerCase().includes(search) ||
+      content.author.toLowerCase().includes(search);
+
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <main className="explore">
       <section className="explore-header">
@@ -46,27 +57,41 @@ function Explore() {
         </p>
       </section>
 
-      <section className="category-filter">
-        <div className="filter-header">
-          <h2>Filtrar por categoría</h2>
+      <section className="explore-tools">
+        <div className="search-box">
+          <label htmlFor="content-search">Buscar contenidos</label>
 
-          <span>{filteredContents.length} contenidos</span>
+          <input
+            id="content-search"
+            type="text"
+            placeholder="Buscar por título, autor o descripción..."
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+          />
         </div>
 
-        <div className="filter-buttons">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={
-                selectedCategory === category
-                  ? "filter-button active"
-                  : "filter-button"
-              }
-              onClick={() => handleCategoryChange(category)}
-            >
-              {category}
-            </button>
-          ))}
+        <div className="category-filter">
+          <div className="filter-header">
+            <h2>Filtrar por categoría</h2>
+
+            <span>{filteredContents.length} contenidos</span>
+          </div>
+
+          <div className="filter-buttons">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={
+                  selectedCategory === category
+                    ? "filter-button active"
+                    : "filter-button"
+                }
+                onClick={() => handleCategoryChange(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -80,7 +105,7 @@ function Explore() {
         <section className="empty-results">
           <h2>No encontramos contenidos</h2>
 
-          <p>No hay contenidos disponibles para esta categoría.</p>
+          <p>Probá con otro término de búsqueda o seleccioná otra categoría.</p>
         </section>
       )}
     </main>
