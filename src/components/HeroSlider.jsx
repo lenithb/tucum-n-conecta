@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/public/hero/tafi.webp",
+    image: "/hero/tafi.webp",
     title: "Tucumán tiene una millonada de cosas.",
     description:
       "Descubrí las historias, expresiones y lugares que forman parte de nuestra identidad.",
   },
   {
     id: 2,
-    image: "/public/hero/perro.webp",
+    image: "/hero/perro.webp",
     title: "Historias de nuestra provincia",
     description:
       "Personas, mitos, tradiciones y expresiones culturales que mantienen viva la identidad tucumana.",
   },
   {
     id: 3,
-    image: "/public/hero/poncho.webp",
+    image: "/hero/poncho.webp",
     title: "Una provincia para descubrir",
     description:
       "Explorá el arte, la música, el cine, la literatura y mucho más.",
